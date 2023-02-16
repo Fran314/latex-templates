@@ -1,0 +1,91 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage{hyperref}
+\usepackage{calc}
+\usepackage{ragged2e}
+\usepackage{geometry}
+\geometry{
+    top=25mm,
+    bottom=20mm,
+    right=25mm,
+    left=25mm
+}
+
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+
+\newcommand{\name}[1]{
+    \begin{center}
+        \huge #1
+    \end{center}
+}
+\newcommand{\header}[2]{
+    \noindent
+    \begin{minipage}[t]{0.4\textwidth} 
+        #1
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.4\textwidth}
+        \raggedleft
+        #2
+    \end{minipage}
+}
+\newenvironment{labelblock}[2][60pt]{
+    \newcommand{\entry}[2]{
+          & \\[-10pt]
+        \centering ##1 & 
+        \begin{minipage}[t]{\textwidth - #1 - 30pt}
+            ##2
+        \end{minipage}\\
+    }
+    \newcommand{\separator}{
+        & \\
+    }
+
+    \vspace{20pt}
+    \noindent\hspace{10pt}\textit{#2}\\[-10pt]
+    \rule{\textwidth}{0.4pt}
+    \begin{tabular}{p{#1} | l}
+}{
+    \end{tabular}
+}
+
+\begin{document}
+    \name{John Doe}
+
+    \header{
+        \href{mailto:{example@gmail.com}}{example@gmail.com}\\
+        \href{https://github.com/Fran314}{Fran314 su GitHub}
+    }{
+        Name of your street, 123\\
+        City, 12345
+    }
+
+    \begin{labelblock}{Education}
+        \entry{Jan 1970}{
+            \textbf{Bachelor degree in something}\\
+            University of somewhere
+            Additional info: \textit{some info}\\
+            Grade: \textit{the best possible grade}
+        }
+    \end{labelblock}
+
+    \begin{labelblock}{Working experience}
+        \entry{1970-\\Now}{
+            \textbf{Some job title that hopefully sounds good}\\
+            \textit{but it wasn't actually that good}
+        }
+    \end{labelblock}
+
+    \begin{labelblock}{Other experience}
+        \entry{Languages}{
+            \textbf{Great knowledge of the English language}\\
+            \textit{I swear I'm somewhat good at it}\\
+            \textit{Also put here some kind of certificate because that's better}
+        }
+        \entry{Teamwork}{
+            \textbf{Great teamworker}\\
+            \textit{Like trust me}\\
+        }
+    \end{labelblock}
+\end{document}

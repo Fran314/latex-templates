@@ -1,0 +1,68 @@
+\documentclass[8pt]{beamer}
+
+%--- STYLE ---%
+\usetheme{Dresden}
+\usecolortheme{spruce}
+\definecolor{MSUgreen}{RGB}{0,102,51} 
+
+% Change institute color in footer to make it readable (green and darker)
+\setbeamercolor{institute in head/foot}{parent=palette primary}
+% Change title color in footer to make it readable (lighter)
+\setbeamercolor{title in head/foot}{fg=white!90!MSUgreen}
+
+% Remove the bottom right navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% blocks
+\setbeamercolor{block title}{bg=white!70!MSUgreen,fg=MSUgreen!60!black}
+\setbeamercolor{block body}{bg=white!90!MSUgreen}
+
+% itemize style
+\setbeamercolor{itemize item}{fg=MSUgreen!80!black}
+\setbeamertemplate{itemize item}[circle]
+
+% enumerate style
+\setbeamercolor{enumerate item}{fg=MSUgreen!80!black}
+
+% Comic Neue
+\usepackage{fontspec}
+%--- ---%
+
+\title{Titolo}
+\subtitle{Sottotitolo}
+\author{Nome Cognome}
+\institute{Università di Pisa\\Dipartimento di Matematica}
+\date{23 Settembre 2022}
+
+\begin{document}
+
+    \frame{\titlepage}
+    
+    \begin{frame}{Slide esempio}
+        \begin{block}{Blocco esempio}
+            Testo del blocco esempio
+        \end{block}
+        
+        \begin{itemize}
+            \item Item A
+            \item Item B
+            \item Item C
+        \end{itemize}
+        
+        \begin{enumerate}
+            \item Item 1
+            \item Item 2
+            \item Item 3
+        \end{enumerate} 
+    \end{frame}
+    
+    \begin{frame}{Fine}
+        \begin{center}
+			{
+				\Huge
+				\fontspec{ComicNeue-Bold.otf}
+				Grazie per l'attenzione!
+			}
+        \end{center}
+    \end{frame}
+\end{document}

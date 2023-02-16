@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{geometry}
+\geometry{
+    a4paper,
+    left=10mm,
+    top=10mm,
+    right=10mm,
+    bottom=10mm
+}
+\usepackage{multicol}
+
+\begin{document}
+
+    % \maketitle
+	\begin{center}
+		\Large Testo di sopra\\ \vspace{0.8em}{\Huge Testo di sotto}
+	\end{center}
+	\vspace{2em}
+    \begin{multicols*}{2}
+		\begin{itemize}
+  			\setlength\itemsep{-0.1em}
+			\section*{Sezione 1}
+			\item item 1
+			\item item 2
+			\item item 3
+			\section*{Sezione 2}
+			\item item 1
+			\item item 2
+			\item item 3
+		\end{itemize}
+    \end{multicols*}
+\end{document}
