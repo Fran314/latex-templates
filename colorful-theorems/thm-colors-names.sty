@@ -1,0 +1,90 @@
+\colorlet{LightGray}{Gray!55!Gray}
+
+\usepackage{cleveref}
+
+\usepackage{kvoptions}
+\SetupKeyvalOptions{
+    family=thms,
+    prefix=thms@,
+}
+\DeclareBoolOption[false]{colors}
+
+\newcommand{\@defcolor}{Gray}
+\newcommand{\@thmcolor}{Gray}
+\newcommand{\@propcolor}{Gray}
+\newcommand{\@remcolor}{Gray}
+\newcommand{\@proofcolor}{Gray}
+
+\newcommand{\@deftitlecolor}{}
+\newcommand{\@thmtitlecolor}{}
+\newcommand{\@proptitlecolor}{}
+\newcommand{\@remtitlecolor}{}
+\newcommand{\@prooftitlecolor}{}
+
+% Theorem names
+\newcommand{\@deftitle}{Definition}
+\newcommand{\@thmtitle}{Theorem}
+\newcommand{\@proptitle}{Proposition}
+\newcommand{\@cortitle}{Corollary}
+\newcommand{\@lemtitle}{Lemma}
+\newcommand{\@remtitle}{Remark}
+\newcommand{\@exmpltitle}{Example}
+\newcommand{\@exrctitle}{Exercise}
+\newcommand{\@soltitle}{Solution}
+\newcommand{\@notationtitle}{Notation}
+
+% Theorem names, but plural
+\newcommand{\@deftitleplural}{Definitions}
+\newcommand{\@thmtitleplural}{Theorems}
+\newcommand{\@proptitleplural}{Propositions}
+\newcommand{\@cortitleplural}{Corollaries}
+\newcommand{\@lemtitleplural}{Lemmas}
+\newcommand{\@remtitleplural}{Remarks}
+\newcommand{\@exmpltitleplural}{Examples}
+\newcommand{\@exrctitleplural}{Exercises}
+\newcommand{\@soltitleplural}{Solutions}
+\newcommand{\@notationtitleplural}{Notations}
+
+
+\iflanguage{italian}
+{   
+    \renewcommand{\@deftitle}{Definizione}
+    \renewcommand{\@thmtitle}{Teorema}
+    \renewcommand{\@proptitle}{Proposizione}
+    \renewcommand{\@cortitle}{Corollario}
+    \renewcommand{\@lemtitle}{Lemma}
+    \renewcommand{\@remtitle}{Osservazione}
+    \renewcommand{\@exmpltitle}{Esempio}
+    \renewcommand{\@exrctitle}{Esercizio}
+    \renewcommand{\@soltitle}{Soluzione}
+    \renewcommand{\@notationtitle}{Notazione}
+
+    \renewcommand{\@deftitleplural}{Definizioni}
+    \renewcommand{\@thmtitleplural}{Teoremi}
+    \renewcommand{\@proptitleplural}{Proposizioni}
+    \renewcommand{\@cortitleplural}{Corollari}
+    \renewcommand{\@lemtitleplural}{Lemmi}
+    \renewcommand{\@remtitleplural}{Osservazioni}
+    \renewcommand{\@exmpltitleplural}{Esempi}
+    \renewcommand{\@exrctitleplural}{Esercizi}
+    \renewcommand{\@soltitleplural}{Soluzioni}
+    \renewcommand{\@notationtitleplural}{Notazioni}
+}
+
+
+\ProcessKeyvalOptions*
+
+\ifthms@colors
+    \renewcommand{\@defcolor}{Green}
+    \renewcommand{\@thmcolor}{BrickRed}
+    \renewcommand{\@propcolor}{BrickRed}
+    \renewcommand{\@remcolor}{RoyalBlue}
+    \renewcommand{\@proofcolor}{BrickRed}
+
+    \renewcommand{\@deftitlecolor}{\color{Green}}
+    \renewcommand{\@thmtitlecolor}{\color{BrickRed}}
+    \renewcommand{\@proptitlecolor}{\color{BrickRed}}
+    \renewcommand{\@remtitlecolor}{\color{RoyalBlue}}
+    \renewcommand{\@prooftitlecolor}{\color{BrickRed}}
+\fi
+
